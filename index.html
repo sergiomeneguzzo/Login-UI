@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--===== REMIX ICONS =====-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--===== CSS =====-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="assets/css/styles.css"
+    />
+  </head>
+  <body>
+    <div class="login">
+      <div
+        style="
+          width: 100%;
+          height: 100vh;
+          position: fixed;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        "
+      >
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+          "
+        >
+          <!-- Immagine di fallback -->
+          <img
+            src="assets/img/fallback.jpg"
+            alt="Background"
+            style="
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              z-index: -1;
+            "
+          />
+
+          <!-- Spline Viewer -->
+          <spline-viewer
+            url="https://prod.spline.design/eTuOGy7KkjYyAy9T/scene.splinecode"
+            style="
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+            "
+          ></spline-viewer>
+        </div>
+      </div>
+
+      <form class="login__form">
+        <h1 class="login__title">Login</h1>
+        <div class="login__content">
+          <div class="login__box">
+            <i class="ri-user-3-line"></i>
+            <div class="login__box-input">
+              <input type="email" class="login__input" placeholder="" />
+              <label class="login__label">Email</label>
+            </div>
+          </div>
+
+          <div class="login__box">
+            <i class="ri-lock-2-line"></i>
+            <div class="login__box-input">
+              <input
+                type="password"
+                class="login__input"
+                id="login-password"
+                placeholder=""
+              />
+              <label class="login__label">Password</label>
+              <i class="ri-eye-off-line login__eye" id="login-eye"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="login__check">
+          <div class="login__check-group">
+            <input type="checkbox" class="login__check-input" />
+            <label class="login__check-label">Ricordami</label>
+          </div>
+
+          <a href="#" class="login__forgot">Password dimenticata?</a>
+        </div>
+
+        <div class="login__button">Login</div>
+
+        <p class="login__register">
+          Non hai un account? <a href="#">Registrati</a>
+        </p>
+      </form>
+    </div>
+
+    <!--===== SPLINE =====-->
+    <script
+      type="module"
+      src="https://unpkg.com/@splinetool/viewer@1.9.46/build/spline-viewer.js"
+    ></script>
+    <!--===== JS =====-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
